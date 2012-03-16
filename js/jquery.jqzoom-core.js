@@ -57,7 +57,8 @@
         var img = $("img:eq(0)", el);
         el.title = $(el).attr('title');
         el.imagetitle = img.attr('title');
-        var zoomtitle = "";//($.trim(el.title).length > 0) ? el.title : el.imagetitle;
+        var zoomtitle = ($.trim(el.title).length > 0) ? el.title : el.imagetitle;
+        zoomtitle = (zoomtitle) ? zoomtitle : "";
         var smallimage = new Smallimage(img);
         var lens = new Lens();
         var stage = new Stage();
